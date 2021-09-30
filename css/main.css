@@ -626,4 +626,8 @@ body {
     text-overflow: hidden;
   }
 }
+
+.divProductos .btn {
+  background: #000;
+}
 /*# sourceMappingURL=main.css.map */

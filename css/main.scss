@@ -149,7 +149,7 @@ body{
     .gridBody {
         grid-template-columns: repeat(1, auto);
         grid-template-rows: repeat(6, auto);
-        grid-template-areas: 
+        grid-template-areas:
         "navbar"
         "novedades"
         "cards"
@@ -570,5 +570,11 @@ body{
             
         text-overflow: hidden;
         }
+    }
+}
+
+.divProductos {
+    .btn {
+        background: #000;
     }
 }
