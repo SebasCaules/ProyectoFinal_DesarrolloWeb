@@ -137,9 +137,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #E4DFDB;
   text-align: center;
 }
@@ -411,84 +408,43 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.productos {
+.productosCards {
+  background: #E4DFDB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  --bs-gutter-x: 0 !important;
+  margin-bottom: 2.5rem;
+}
+
+.productosCards .card:hover {
+  -webkit-box-shadow: 6px 6px grey;
+          box-shadow: 6px 6px grey;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: scale(1.03, 1.05);
+          transform: scale(1.03, 1.05);
+}
+
+.productosCards div {
+  margin: 2.5%;
   background-color: #AAAEAD;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.productosCards div a {
+  margin-left: 5%;
+  text-decoration: none;
+  color: #7E573A;
+}
+
+.productosCards ul li {
+  background-color: #AAAEAD;
+}
+
+.productosCards ul, .productosCards h5, .productosCards h6, .productosCards a {
   text-align: center;
-  margin: 1% 5% 1% 5%;
-  font-family: prata;
-  font-size: 20px;
-}
-
-.productos .productos__image {
-  border: 10px;
-  padding: 15px;
-}
-
-.productos .productos__image img {
-  height: 300px;
-  width: 300px;
-}
-
-.productos .productos__desc {
-  color: white;
-  text-align: center;
-  margin: 5%;
-  text-overflow: hidden;
-}
-
-.productos .productos__button {
-  width: 30%;
-  margin: 1%;
-}
-
-.productos .productos__date {
-  width: 25%;
-  font-size: 30px;
-  margin: 1.5%;
-}
-
-.productos .productos__price {
-  width: 25%;
-  font-size: 30px;
-  margin: 1.5%;
-}
-
-.productos .productos__section {
-  background-color: #4F5453;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  margin: 1%;
-}
-
-@media only screen and (max-width: 1200px) {
-  .productos {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    overflow: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .productos p {
-    text-overflow: hidden;
-  }
 }
 
 .bodybg {

@@ -127,7 +127,6 @@ body{
 
 .cards {
     display: flex;
-    justify-content: center;
     background-color: $bgContent;
     text-align: center;
 
@@ -382,66 +381,33 @@ body{
     }
 }
 
-.productos{
-    background-color: $bgH1Color;
+.productosCards {
+    background: $bgContent;
     display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: center;
-    margin: 1% 5% 1% 5%;
-    font-family: $font1;
-    font-size: 20px;
-
-    .productos__image{
-        border: 10px;
-        padding: 15px;
-
-        img {
-            height: 300px;
-            width: 300px;
+    justify-content: space-around;
+    --bs-gutter-x: 0 !important;
+    margin-bottom: 2.5rem;
+    .card:hover{
+        
+        box-shadow: 6px 6px grey;
+        transition: all 0.35s ease-in-out;
+        transform: scale(1.03, 1.05);
+    }
+    div {
+        margin: 2.5%;
+        background-color: $bgH1Color;
+        a {
+            margin-left: 5%;
+            text-decoration: none;
+            color: $textH1Color;
         }
     }
-    .productos__desc{
-        color: white;
+    ul li{
+        background-color: $bgH1Color;
+    }
+
+    ul, h5, h6, a {
         text-align: center;
-        margin: 5%;
-        text-overflow: hidden;
-    }
-    .productos__button{
-        width: 30%;
-        margin: 1%;
-    }
-    .productos__date{
-        width: 25%;
-        font-size: 30px;
-        margin: 1.5%;
-    }
-    .productos__price{
-        width: 25%;
-        font-size: 30px;
-        margin: 1.5%;
-    }
-    .productos__section{
-        background-color: $bgNavColor;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 1%;
-
-    }
-}
-
-
-@media only screen and(max-width: 1200px){
-    .productos {
-        flex-wrap: wrap;
-        overflow: auto;
-        justify-content: center;
-        p {
-            
-        text-overflow: hidden;
-        }
     }
 }
 
