@@ -419,6 +419,10 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.productosCards .border {
+  border: #48D932 solid 2.5px !important;
+}
+
 .productosCards .card:hover {
   -webkit-box-shadow: 6px 6px grey;
           box-shadow: 6px 6px grey;
@@ -443,8 +447,13 @@ body {
   background-color: #AAAEAD;
 }
 
-.productosCards ul, .productosCards h5, .productosCards h6, .productosCards a {
+.productosCards ul, .productosCards h5, .productosCards h6, .productosCards div {
   text-align: center;
+}
+
+.productosCards button {
+  background: #4F5453;
+  color: #E4DFDB;
 }
 
 .bodybg {

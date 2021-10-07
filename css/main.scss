@@ -387,6 +387,10 @@ body{
     justify-content: space-around;
     --bs-gutter-x: 0 !important;
     margin-bottom: 2.5rem;
+
+    .border {
+        border: #48D932 solid 2.5px !important;
+    }
     .card:hover{
         
         box-shadow: 6px 6px grey;
@@ -406,10 +410,16 @@ body{
         background-color: $bgH1Color;
     }
 
-    ul, h5, h6, a {
+    ul, h5, h6, div {
         text-align: center;
     }
+
+    button {
+        background: $bgNavColor;
+        color: $textNavColor;
+    }
 }
+
 
 .bodybg {
     background-color: $bgContent;
