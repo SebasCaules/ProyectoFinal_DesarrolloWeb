@@ -417,10 +417,12 @@ body {
       justify-content: space-around;
   --bs-gutter-x: 0 !important;
   margin-bottom: 2.5rem;
+  font-family: prata;
+  font-size: 20px;
 }
 
 .productosCards .border {
-  border: #48D932 solid 2.5px !important;
+  border: #48D932 solid 4.5px !important;
 }
 
 .productosCards .card:hover {
@@ -430,6 +432,11 @@ body {
   transition: all 0.35s ease-in-out;
   -webkit-transform: scale(1.03, 1.05);
           transform: scale(1.03, 1.05);
+}
+
+.productosCards h5, .productosCards h6 {
+  font-size: 23px;
+  text-decoration: underline;
 }
 
 .productosCards div {
