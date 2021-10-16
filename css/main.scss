@@ -390,6 +390,11 @@ body{
     font-family: $font1;
     font-size: 20px;
 
+    .cardsDiv {
+        width: 22rem;
+        margin-top: 30px
+    }
+
     .border {
         border: #48D932 solid 4.5px !important;
     }
@@ -551,11 +556,5 @@ body{
             
         text-overflow: hidden;
         }
-    }
-}
-
-.divProductos {
-    .btn {
-        background: #000;
     }
 }
