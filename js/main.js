@@ -1,3 +1,33 @@
+// Cuenta de usuario en LS
+let usuario = onClick()
+let usuarioLS = localStorage.getItem(usuario);
+
+function display() {
+  $(".dpUsuarios").addClass("dpActivo");
+}
+
+$("#dpCerrar").click(() => {
+  $(".dpUsuarios").removeClass("dpActivo");
+});
+
+function onClick() {
+  $("#dpSubmit").on("click", () => {
+    let usuario;
+    usuario = $("#dpInput").val();
+    console.log(usuario);
+    localStorage.setItem("usuario", usuario);
+    $(".dpUsuarios").removeClass("dpActivo");
+    return usuario
+  });
+}
+
+if (!usuarioLS) {
+  display();
+  usuario
+} else {
+  usuario = usuarioLS;
+}
+
 // Array de Productos
 class Productos {
   constructor(
@@ -123,17 +153,23 @@ const arrayProductos = [
   ),
 ];
 
-const carrito = []
+const carrito = [];
 
-const agregarAlCarrito = (prodId) => {
-  const producto = productos.find( el => el.id === prodId)
-  carrito.push(producto)
-  console.log(carrito)
-}
+const agregarAlCarrito = (productoId) => {
+  const producto = arrayProductos.find((el) => el.id === productoId);
+  carrito.push(producto);
+  carritoUpdate();
+};
+
+const carritoUpdate = () => {
+  $("#carrito").text(`
+      Carrito ${carrito.length}
+  `);
+};
+
+carritoUpdate();
 
 // Inicializador del Catalogo
-const contenedorProductos = document.getElementById("productos");
-
 function duracionCheck(producto) {
   let duracionChangeResult = "";
   let duracionChangeMin = "";
@@ -160,7 +196,7 @@ arrayProductos.forEach((producto) => {
   //Check de la duracion
   let duracionChange = duracionCheck(producto);
 
-  $('.productosCards').append(`
+  $(".productosCards").append(`
           <div class="cardsDiv card-img-top card">
             <div>
               <img
@@ -183,21 +219,21 @@ arrayProductos.forEach((producto) => {
               </div>
               <button class="btn addBtn" id="addBtn${producto.id}" type="submit">Añadir al Carrito</button>
             </div>
-          </div>`)
+          </div>`);
 
-          $(`#agregar${producto.id}`).on('click', () => {
-            agregarAlCarrito(producto.id)
-          })
+  $(`#addBtn${producto.id}`).on("click", () => {
+    agregarAlCarrito(producto.id);
+  });
 });
 
-
-$('.addBtn').click( () => {
+// Alerta Boton
+$(".addBtn").click(() => {
   Swal.fire({
-      icon: 'success',
-      title: 'Tu producto fue agregado al carrito',
-      html:
-        ' Vaya al ' +
-        '<a href="carrito.html">carrito</a> ' +
-        'para finalizar su compra',
-    })
-})
+    icon: "success",
+    title: "Tu producto fue agregado al carrito",
+    html:
+      " Vaya al " +
+      '<a href="carrito.html">carrito</a> ' +
+      "para finalizar su compra",
+  });
+});

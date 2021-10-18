@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Tienda Vinilos</title>
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/main.js"></script>
+    <meta
+      name="descripcion"
+      content="Este sitio web consiste en una pagina de venta de vinilos"
+    />
+    <meta name="keywords" content="MUSICA, VINILOS, TIENDA, ROCK" />
+    <meta name="author" content="Sebastian Caules" />
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- Barra de navegacion -->
+      <nav class="header__nav">
+        <a class="header__link" href="index.html">Inicio</a>
+        <a class="header__link" href="catalogo.html">Catalogo</a>
+        <a class="header__link" href="sobreNosotros.html">Sobre Nosotros</a>
+        <a class="header__link" href="consultas.html">Consultas</a>
+        <a class="header__link" href="contacto.html">Contacto</a>
+        <a class="header__link" href="carrito.html" id="carrito">Carrito</a>
+      </nav>
+      <!-- Titulo -->
+      <h1 class="header__title">Tienda Vinilos / Catalogo</h1>
+    </header>
+
+    <section class="form">
+      <!-- Titulo -->
+
+      <div class="form__title">
+        <h2>Formulario</h2>
+        <p>
+          Complete el formulario y le responderemos en la brevedad de lo posible
+        </p>
+      </div>
+
+      <!-- Nombre -->
+      <div class="form__name">
+        <label for="inputPassword5" class="form-label">Nombre</label>
+        <input
+          type="name"
+          id="inputPassword5"
+          class="form-control"
+          placeholder="Juan Díaz"
+        />
+      </div>
+
+      <!-- Mail -->
+      <div class="form__mail">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Mail</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="juan@ejemplo.com"
+          />
+        </div>
+      </div>
+
+      <!-- Consulta -->
+      <div class="form__consulta">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Su Consulta</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Escribanos su Consulta Aquí"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- Horario Respuesta -->
+      <div class="form__horario">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Seleccione Horario optimo de Respuesta</option>
+          <option value="1">Mañana (8:30-11:30)</option>
+          <option value="2">Tarde (12:30-4:30)</option>
+          <option value="3">Noche (5:30-8:30)</option>
+        </select>
+      </div>
+
+      <section class="abajo">
+
+          <!-- Terminos y Condiciones -->
+          <div class="termsCond">
+            <h3 class="termsCond__title">Terminos y Condiciones</h3>
+            <a class="termsCond__link" href="#"
+              >Terminos y Condiciones de la Pagina</a
+            >
+            <div class="form-check termsCond__check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault"
+                >Accepto Terminos y Condiciones</label
+              >
+            </div>
+          </div>
+    
+          <!-- Boton -->
+          <div class="form__button">
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+          </div>
+      </section>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <a class="footer__mail" href="tiendavinilos@gmail.com"
+          >tiendavinilos@gmail.com</a
+        >
+        <a class="footer__num" href="1566986785">1566986785</a>
+        <a class="footer__ig" href="https://www.instagram.com/?hl=es"
+          >Intagram</a
+        >
+        <a class="footer__fb" href="https://www.facebook.com/?hl=es">Facebok</a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

@@ -430,6 +430,49 @@ body{
     }
 }
 
+.dpUsuarios {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+
+    .dpContenido {
+        background-color: $bgContent;
+        width: 400px;
+        height: 250px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 22px;
+        justify-content: center;
+    }
+    p {
+        margin: auto;
+        padding: 10px;
+    }
+    p, a {
+        font-size: 30px;
+        text-align: center;
+        color: $textH1Color;
+    }
+    a:hover {
+        color: $textNavHoverColor;
+    }
+}
+
+.dpActivo {
+    visibility: visible;
+    opacity: 1;
+}
 
 .bodybg {
     background-color: $bgContent;
