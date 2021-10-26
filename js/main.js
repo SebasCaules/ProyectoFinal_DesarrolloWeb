@@ -1,34 +1,13 @@
-// Cuenta de usuario en LS
-let usuario = onClick()
-let usuarioLS = localStorage.getItem(usuario);
-
-function display() {
-  $(".dpUsuarios").addClass("dpActivo");
-}
-
-$("#dpCerrar").click(() => {
-  $(".dpUsuarios").removeClass("dpActivo");
-});
-
-function onClick() {
-  $("#dpSubmit").on("click", () => {
-    let usuario;
-    usuario = $("#dpInput").val();
-    console.log(usuario);
-    localStorage.setItem("usuario", usuario);
-    $(".dpUsuarios").removeClass("dpActivo");
-    return usuario
-  });
-}
-
-if (!usuarioLS) {
-  display();
-  usuario
-} else {
-  usuario = usuarioLS;
-}
-
 // Array de Productos
+//     "id":
+//     "img":
+//     "nombre":
+//     "banda":
+//     "precio":
+//     "cantidadLPs":
+//     "duracion":
+//     "fechaEntrada":
+
 class Productos {
   constructor(
     id,
@@ -50,6 +29,7 @@ class Productos {
     this.fechaEntrada = fechaEntrada;
   }
 }
+
 const arrayProductos = [
   new Productos(
     0,
@@ -166,7 +146,6 @@ const carritoUpdate = () => {
       Carrito ${carrito.length}
   `);
 };
-
 carritoUpdate();
 
 // Inicializador del Catalogo
@@ -231,9 +210,6 @@ $(".addBtn").click(() => {
   Swal.fire({
     icon: "success",
     title: "Tu producto fue agregado al carrito",
-    html:
-      " Vaya al " +
-      '<a href="carrito.html">carrito</a> ' +
-      "para finalizar su compra",
+    html: `Vaya al <a href="carrito.html">carrito</a> para finalizar su compra`,
   });
 });
