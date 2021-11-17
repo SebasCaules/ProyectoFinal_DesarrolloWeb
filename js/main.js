@@ -1,13 +1,3 @@
-// Array de Productos
-//     "id":
-//     "img":
-//     "nombre":
-//     "banda":
-//     "precio":
-//     "cantidadLPs":
-//     "duracion":
-//     "fechaEntrada":
-
 class Productos {
   constructor(
     id,
@@ -132,21 +122,6 @@ const arrayProductos = [
     [22, 08]
   ),
 ];
-
-const carrito = [];
-
-const agregarAlCarrito = (productoId) => {
-  const producto = arrayProductos.find((el) => el.id === productoId);
-  carrito.push(producto);
-  carritoUpdate();
-};
-
-const carritoUpdate = () => {
-  $("#carrito").text(`
-      Carrito ${carrito.length}
-  `);
-};
-carritoUpdate();
 
 // Inicializador del Catalogo
 function duracionCheck(producto) {

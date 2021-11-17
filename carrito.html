@@ -7,18 +7,26 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Tienda Vinilos</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-    crossorigin="anonymous"
-  />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/usuario.js"></script>
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/carrito.js"></script>
     <meta
       name="descripcion"
       content="Este sitio web consiste en una pagina de venta de vinilos"
@@ -36,15 +44,19 @@
         <a class="header__link" href="sobreNosotros.html">Sobre Nosotros</a>
         <a class="header__link" href="consultas.html">Consultas</a>
         <a class="header__link" href="contacto.html">Contacto</a>
-        <a id="carrito" class="header__link header__link--active" href="carrito.html"
+        <a
+          id="carrito"
+          class="header__link header__link--active"
+          href="carrito.html"
           >Carrito</a
         >
       </nav>
       <!-- Titulo -->
       <h1 class="header__title">Tienda Vinilos</h1>
     </header>
-
-
+    
+    <section class="carritoContainer"></section>
+    <button id="deleteAll">Delete All</button>
 
     <!-- Footer -->
     <footer class="footer">
