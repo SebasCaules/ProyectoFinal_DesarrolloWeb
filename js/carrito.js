@@ -56,8 +56,24 @@ for (var i = 0; i <= productosInLSArray.length; i++) {
   const producto = arrayProductos;
   if (productosInCarrito[i]) {
     $(".carritoContainer").append(`
-              <div class="cardsDiv card-img-top card">
-                  <div>
+                <div class="card mb-3 cardDiv" style="max-width: 25rem;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="${producto[i].img}" class="img-fluid rounded-start" alt="${producto[i].nombre}">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${producto[i].nombre}</h5>
+                            <h6 class="card-title">${producto[i].banda}</h6>
+                            <p class="card-text">Cantidad de Items : ${productosInCarrito[i]}</p>
+                        </div>
+                        </div>
+                    </div>
+              </div>`);
+  }
+}
+
+/* <div>
                       <img
                       class="card-img-top"
                       src="${producto[i].img}"
@@ -77,10 +93,7 @@ for (var i = 0; i <= productosInLSArray.length; i++) {
                       <a href="#" class="card-link">Escuchar en Spotify</a>
                       </div>
                       <button class="btn addBtn" id="addBtn${producto.id}" type="submit">Añadir al Carrito</button>
-                  </div>
-              </div>`);
-  }
-}
+                  </div> */
 
 $("#deleteAll").on("click", () => {
   if (productosInLS) {
