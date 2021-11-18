@@ -18,7 +18,14 @@ function carritoLS() {
   localStorage.setItem("productos", carritoList);
 }
 
-const productosInLSArray = productosInLS.split(",");
+function productosArray() {
+  if (productosInLS) {
+    const p = productosInLS.split(",");
+    return p;
+  }
+}
+
+const productosInLSArray = productosArray();
 
 function checkArrayP(array) {
   for (var i = 0; i <= array.length; i++) {
