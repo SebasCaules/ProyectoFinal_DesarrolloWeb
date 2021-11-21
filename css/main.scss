@@ -606,3 +606,17 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+.deleteBtn {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+
+    .btn {
+        background: $textH1Color;
+        border: none;
+        height: 43px;
+        width: 150px;
+        box-shadow: none;
+    }
+}

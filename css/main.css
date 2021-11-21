@@ -663,4 +663,23 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.deleteBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: right;
+}
+
+.deleteBtn .btn {
+  background: #7E573A;
+  border: none;
+  height: 43px;
+  width: 150px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 /*# sourceMappingURL=main.css.map */
